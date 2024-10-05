@@ -1,0 +1,46 @@
+@keyframes glowingBorder {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.1);
+    }
+}
+
+.search-bar-animation {
+    animation: glowingBorder 2s infinite alternate;
+    border-radius: 30px;
+}
+
+/* Add this CSS to your Header.css */
+
+/* For the logo */
+.logo_container a {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* On hover, slightly enlarge the logo */
+.logo_container a:hover {
+    transform: scale(1.1); /* Enlarge the logo by 10% */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Optional: if you want continuous pulsating animation */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo_container a:hover {
+    animation: pulsate 1s infinite; /* Infinite pulsating animation */
+}
